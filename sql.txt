@@ -1,0 +1,7 @@
+
+CREATE TABLE `4capas_c_sharp`.`clientes` (`Id` INT NULL AUTO_INCREMENT , `Nombre` VARCHAR(50) NOT NULL , `Apellido` VARCHAR(50) NOT NULL , `Foto` VARCHAR(150) NOT NULL , PRIMARY KEY (`Id`)) ENGINE = InnoDB; 
+
+INSERT INTO `clientes` (`Id`, `Nombre`, `Apellido`, `Foto`) VALUES ('1', 'antony', 'Tenorio', 'foto') 
+UPDATE `clientes` SET `Nombre` = 'antonyww', `Apellido` = 'Tenorioe', `Foto` = 'foto4fg' WHERE `clientes`.`Id` = 1 
+DELETE FROM clientes WHERE `clientes`.`Id` = 1"
+SELECT * FROM `clientes`LIMIT 1000; 
