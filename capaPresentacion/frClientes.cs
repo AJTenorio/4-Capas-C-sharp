@@ -43,18 +43,24 @@ namespace capaPresentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            bool Resultado;
             CECliente cECliente = new CECliente();
             cECliente.Id = (int)txtId.Value;
             cECliente.Nombre = txtNombre.Text; 
             cECliente.Apellido = txtApellido.Text;
             cECliente.Foto = picFoto.ImageLocation; ;
 
-            CNCliente.ValidarDatos(cECliente);
+            Resultado = CNCliente.ValidarDatos(cECliente);
+            if (Resultado == false)
+            {
+                return;
+            }
+            MessageBox.Show("Todo bien vamos a insertar");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            CNCliente.pruebaMySql();
         }
 
         private void frClientes_Load(object sender, EventArgs e)
