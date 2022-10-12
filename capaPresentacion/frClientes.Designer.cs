@@ -42,8 +42,10 @@ namespace capaPresentacion
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.gridDatos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // lbId
@@ -98,6 +100,7 @@ namespace capaPresentacion
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(129, 11);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(69, 27);
@@ -158,11 +161,23 @@ namespace capaPresentacion
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // gridDatos
+            // 
+            this.gridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridDatos.Location = new System.Drawing.Point(339, 49);
+            this.gridDatos.Name = "gridDatos";
+            this.gridDatos.RowHeadersWidth = 51;
+            this.gridDatos.RowTemplate.Height = 29;
+            this.gridDatos.Size = new System.Drawing.Size(515, 329);
+            this.gridDatos.TabIndex = 12;
+            this.gridDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridDatos_CellDoubleClick);
+            // 
             // frClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 423);
+            this.ClientSize = new System.Drawing.Size(866, 390);
+            this.Controls.Add(this.gridDatos);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnNuevo);
@@ -180,6 +195,7 @@ namespace capaPresentacion
             this.Load += new System.EventHandler(this.frClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,6 +216,7 @@ namespace capaPresentacion
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.DataGridView gridDatos;
     }
 }
 

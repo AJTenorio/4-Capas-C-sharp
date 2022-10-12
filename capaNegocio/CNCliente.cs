@@ -2,6 +2,7 @@
 using capaEntidad;
 using System.Windows.Forms;
 using capaDatos;
+using System.Data;
 
 namespace capaNegocio
 {
@@ -32,6 +33,25 @@ namespace capaNegocio
         public void pruebaMySql()
         {
             CDCliente.PruebaConexion();
+        }
+
+        public void CrearCliente(CECliente cliente)
+        {
+            CDCliente.Crear(cliente);
+        }
+
+        public DataSet ObtenerDatos()
+        {
+            return CDCliente.Listar();
+        }
+
+        public void EditarCliente(CECliente cliente)
+        {
+            CDCliente.Editar(cliente);
+        }
+        public void EliminarCliente(CECliente cliente)
+        {
+            CDCliente.Eliminar(cliente);
         }
     }
 }
